@@ -1,11 +1,12 @@
 import subprocess
-import webview
 from time import sleep
 
 print("Attempting to install dependencies!")
 
 subprocess.run(["pip", "install", "pywebview", "pyinstaller"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 print("Done!")
+
+import webview
 
 sleep(0.45)
 subprocess.run(["cls"], shell=True)
