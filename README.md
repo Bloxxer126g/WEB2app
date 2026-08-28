@@ -5,4 +5,6 @@ Turn any HTML file or website into an app!
 How to use:
 #1: Install Python! Python is required to package the app.
 
-Head to https://python.org/ and download 
+Head to https://python.org/ and download the latest version
+
+#2: Download and run **main.exe**
