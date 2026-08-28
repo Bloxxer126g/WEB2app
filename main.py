@@ -3,6 +3,11 @@ from time import sleep
 from tkinter import messagebox
 import shutil
 import os
+import platform
+
+Clear_CMD = "clear"
+if platform.system() == "Windows":
+    Clear_CMD = "cls"
 
 def ShowAndVerifyChoices():
     messagebox.showinfo("Verify that this is right", "We will display a preview of the app. Please close it to continue.")
@@ -18,7 +23,7 @@ import webview
 webview.create_window('"""+appName.get()+"""', '"""+appURL.get()+"""')
 webview.start()
             """)
-        subprocess.run(["cls"], shell=True)
+        subprocess.run([Clear_CMD], shell=True)
         subprocess.run(["pyinstaller", "app.py", "--onefile", "--noconsole"])
         messagebox.showinfo("WEB2app GUI", "The app has been built! Quickly cleaning up files.")
         os.remove("app.py")
@@ -46,7 +51,7 @@ import webview
 from customtkinter import *
 
 sleep(0.45)
-subprocess.run(["cls"], shell=True)
+subprocess.run([Clear_CMD], shell=True)
 
 app = CTk()
 app.title("WEB2app Converter")
