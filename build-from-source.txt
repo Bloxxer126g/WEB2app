@@ -1,0 +1,7 @@
+HOW TO BUILD FROM SOURCE:
+
+#1: install customtkinter locally
+[ pip install customtkinter ]
+
+#2: pyinstaller the file
+[ pyinstaller -F main.py --collect-all customtkinter ]
