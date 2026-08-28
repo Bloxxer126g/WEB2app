@@ -25,6 +25,7 @@ webview.start()
         os.remove("app.spec")
         shutil.rmtree("build")
         messagebox.showinfo("WEB2app GUI", "Done! The build is available in /dist directory")
+        exit()
 
         
 
@@ -66,44 +67,3 @@ button.grid(row=3, column=1, padx=20, pady=20)
 app.columnconfigure(1, weight=1)
 
 app.mainloop()
-
-# print("Welcome to WEB2app")
-# print("What should your app be titled?")
-# WindowTitle = input("> ")
-# print("Ok! Enter the link to the website.")
-# SiteURL = "https://"+input("> https://")
-# print("Previewing site!")
-# print("Close the window to continue.")
-
-# webview.create_window(WindowTitle, SiteURL)
-# webview.start()
-
-# print("Would you like to package this as an app? [Y/n]")
-# resp = input("> ")
-
-# if resp.lower() == "n":
-#     subprocess.run(["cls"], shell=True)
-#     print("Exited!")
-#     exit()
-
-# subprocess.run(["cls"], shell=True)
-# print("Preparing files!")
-
-# with open("temp.py", "a") as file:
-#     file.write("""    
-# import webview
-# webview.create_window('"""+WindowTitle+"""', '"""+SiteURL+"""')
-# webview.start()
-#     """)
-
-# print("Creating app!")
-# sleep(0.4)
-
-# subprocess.run(["cls"], shell=True)
-# subprocess.run(["pyinstaller", "temp.py", "--onefile", "--noconsole"])
-# subprocess.run(["cls"], shell=True)
-
-# print("Done building app. Cleaning up temp files!")
-# print("not actually gonna clean up >:)")
-
-# # subprocess.run()
