@@ -35,11 +35,6 @@ webview.start()
         
 
 
-import sys
-if sys.stdin is None or not sys.stdin.readable():
-    print("No console available — this build can't take input.")
-    print("Please run the executable from Command Prompt!")
-    exit()
 
 print("Attempting to install dependencies!")
 messagebox.showinfo("WEB2app GUI", "Updating all dependencies!")
